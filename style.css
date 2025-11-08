@@ -20,7 +20,7 @@ body {
   cursor: default;
   border: none !important;
   transition: box-shadow 0.3s ease;
-  bottom: 35%;
+  bottom: 250px;
 }
 
 /* hover effect นุ่มนวลแทนเส้นประ */
