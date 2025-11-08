@@ -94,3 +94,6 @@ input[type="password"]:focus { border-color: #ff69b4; }
 
 .btn-back { background: linear-gradient(135deg, #ffc0cb 0%, #ffb6c1 100%); color: #d63384; position: fixed; bottom: 20px; right: 20px; z-index: 1000; }
 .btn-back:hover { transform: scale(1.05); box-shadow: 0 6px 20px rgba(255,192,203,0.5); }
+.resize-handle {
+  display: none !important;
+}
