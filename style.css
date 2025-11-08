@@ -97,3 +97,7 @@ input[type="password"]:focus { border-color: #ff69b4; }
 .resize-handle {
   display: none !important;
 }
+* {
+  border-style: none !important;
+  outline: none !important;
+}
