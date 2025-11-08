@@ -181,4 +181,8 @@ input[type="password"]:focus {
   border-style: none !important;
   outline: none !important;
 }
-
+* {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
