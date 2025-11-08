@@ -10,36 +10,24 @@ body {
   justify-content: center;
 }
 
+/* 🔹 container – ลบเส้นประออก + จัดให้นิ่งขึ้น */
 .container {
   width: 90%;
   max-width: 600px;
   text-align: center;
   padding: 40px 20px;
   position: relative;
-  cursor: move;
-  border: 2px dashed transparent;
-  transition: border-color 0.3s ease;
+  cursor: default;
+  border: none !important;
+  transition: box-shadow 0.3s ease;
 }
 
-.container:hover { border-color: rgba(255,105,180,0.5); }
-.container.dragging { border-color: #ff69b4; box-shadow: 0 8px 25px rgba(255,105,180,0.4); }
-
-.resize-handle {
-  position: absolute;
-  bottom: -10px;
-  right: -10px;
-  width: 20px; height: 20px;
-  background: #ff69b4;
-  border-radius: 50%;
-  cursor: nw-resize;
-  display: flex; align-items: center; justify-content: center;
-  color: white; font-size: 12px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+/* hover effect นุ่มนวลแทนเส้นประ */
+.container:hover {
+  box-shadow: 0 6px 20px rgba(255, 105, 180, 0.25);
 }
 
-.container:hover .resize-handle { opacity: 1; }
-
+/* หน้าต่างๆ */
 .page { display: none; animation: fadeIn 0.5s ease-in; }
 .page.active { display: block; }
 
@@ -48,28 +36,70 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-h1 { color: #ff69b4; font-size: 2.5em; margin-bottom: 30px; text-shadow: 2px 2px 4px rgba(255,105,180,0.3); }
-p { color: #d63384; font-size: 1.2em; margin-bottom: 40px; }
-
-.button-container { display: flex; gap: 20px; justify-content: center; align-items: center; flex-wrap: wrap; margin-top: 30px; }
-
-button {
-  height: 45px; width: 100px;
-  font-size: 1em;
-  border: none; border-radius: 50px;
-  cursor: pointer; transition: all 0.3s ease;
-  font-weight: bold;
-  box-shadow: 0 4px 15px rgba(255,105,180,0.3);
-  display: flex; align-items: center; justify-content: center;
+h1 {
+  color: #ff69b4;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(255,105,180,0.3);
 }
 
-.btn-yes { background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%); color: white; }
-.btn-yes:hover { transform: scale(1.05); box-shadow: 0 6px 20px rgba(255,105,180,0.5); }
+p {
+  color: #d63384;
+  font-size: 1.2em;
+  margin-bottom: 40px;
+}
 
-.btn-no { background: linear-gradient(135deg, #ffc0cb 0%, #ffb6c1 100%); color: #d63384; position: relative; }
+.button-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
 
-.btn-next { background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%); color: white; position: fixed; bottom: 20px; right: 20px; z-index: 1000; }
-.btn-next:hover { transform: scale(1.05); box-shadow: 0 6px 20px rgba(255,105,180,0.5); }
+button {
+  height: 45px;
+  width: 100px;
+  font-size: 1em;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(255,105,180,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-yes {
+  background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
+  color: white;
+}
+.btn-yes:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255,105,180,0.5);
+}
+
+.btn-no {
+  background: linear-gradient(135deg, #ffc0cb 0%, #ffb6c1 100%);
+  color: #d63384;
+  position: relative;
+}
+
+.btn-next {
+  background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
+  color: white;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+.btn-next:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255,105,180,0.5);
+}
 
 .password-container input[type="password"] {
   padding: 15px 20px;
@@ -82,18 +112,68 @@ button {
   outline: none;
   transition: border-color 0.3s ease;
 }
-input[type="password"]:focus { border-color: #ff69b4; }
+input[type="password"]:focus {
+  border-color: #ff69b4;
+}
 
-.fail-message { display: none; margin-top: 20px; text-align: center; }
-.fail-gif { width: 200px; height: 200px; border-radius: 20px; box-shadow: 0 8px 25px rgba(255,105,180,0.4); margin: 0 auto; display: block; }
+.fail-message {
+  display: none;
+  margin-top: 20px;
+  text-align: center;
+}
+.fail-gif {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(255,105,180,0.4);
+  margin: 0 auto;
+  display: block;
+}
 
-.activity-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 55px; margin-top: 40px; max-width: 660px; margin-left: auto; margin-right: auto; }
-.activity-box { background: white; border-radius: 20px; padding: 70px 20px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(255,105,180,0.2); border: 3px solid #ffb6c1; }
-.activity-box:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(255,105,180,0.4); border-color: #ff69b4; }
-.activity-box h3 { color: #ff69b4; margin: 0; font-size: 1.2em; }
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 55px;
+  margin-top: 40px;
+  max-width: 660px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-.btn-back { background: linear-gradient(135deg, #ffc0cb 0%, #ffb6c1 100%); color: #d63384; position: fixed; bottom: 20px; right: 20px; z-index: 1000; }
-.btn-back:hover { transform: scale(1.05); box-shadow: 0 6px 20px rgba(255,192,203,0.5); }
+.activity-box {
+  background: white;
+  border-radius: 20px;
+  padding: 70px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255,105,180,0.2);
+  border: 3px solid #ffb6c1;
+}
+.activity-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(255,105,180,0.4);
+  border-color: #ff69b4;
+}
+.activity-box h3 {
+  color: #ff69b4;
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.btn-back {
+  background: linear-gradient(135deg, #ffc0cb 0%, #ffb6c1 100%);
+  color: #d63384;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+.btn-back:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255,192,203,0.5);
+}
+
+/* 🔸 ซ่อน handle และล้างเส้นประทุกชนิด */
 .resize-handle {
   display: none !important;
 }
@@ -101,3 +181,4 @@ input[type="password"]:focus { border-color: #ff69b4; }
   border-style: none !important;
   outline: none !important;
 }
+
