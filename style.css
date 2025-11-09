@@ -200,3 +200,8 @@ input[type="password"]:focus {
   object-fit: cover;
   z-index: -1;
 }
+
+#page4 .container {
+  position: relative;
+  z-index: 1;
+}
