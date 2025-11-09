@@ -191,7 +191,8 @@ input[type="password"]:focus {
 #page1 video,
 #page2 video,
 #page3 video,
-#page4 video{
+#page4 video,
+#pageNo video{
   position: fixed;
   top: 0;
   left: 0;
