@@ -194,6 +194,16 @@ input[type="password"]:focus {
   left: 0;
   width: 100vw;
   height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+#page2 video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   object-fit: cover; /* ให้ขยายเต็มโดยไม่บิดภาพ */
   z-index: -1; /* อยู่หลังข้อความ/ปุ่ม */
 }
