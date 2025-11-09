@@ -202,8 +202,8 @@ input[type="password"]:focus {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover; /* ให้ขยายเต็มโดยไม่บิดภาพ */
-  z-index: -1; /* อยู่หลังข้อความ/ปุ่ม */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
