@@ -14,13 +14,24 @@
 <body>
 
   <!-- Page 1: Yes/No -->
-  <div class="container page active" id="page1">
+<div class="container page active" id="page1" style="position: relative;">
+  <!-- ฝัง Canva เป็นพื้นหลัง -->
+  <iframe 
+    src="https://oodood.my.canva.site/dag4fjixr-w"
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; z-index: 0;"
+    allowfullscreen>
+  </iframe>
+
+  <!-- เนื้อหาปุ่มอยู่ด้านบน -->
+  <div style="position: relative; z-index: 1; text-align: center; padding: 40px;">
     <p id="mainQuestion">Please accept this gift</p>
     <div class="button-container">
       <button class="btn-yes" id="btnYes"><span id="yesText">Yes</span></button>
       <button class="btn-no" id="btnNo"><span id="noText">No</span></button>
     </div>
   </div>
+</div>
+
 
   <!-- Page 2: Next -->
   <div class="container page" id="page2">
