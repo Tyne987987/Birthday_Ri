@@ -13,21 +13,23 @@
 </head>
 <body>
 
-  <!-- Page 1: Yes/No -->
-<div class="container page active" id="page1" style="position: relative;">
-  <!-- videoพื้นหลัง page1 -->
-  <video autoplay loop muted playsinline style="width:100%; height:100%; object-fit:cover;">
-    <source src="page1.mp4" type="video/mp4">
+<!-- Page 1: Yes/No -->
+<!-- Page 1: Video Background -->
+<div class="container page active" id="page1" style="position: relative; overflow: hidden;">
+  <video autoplay loop muted playsinline 
+         style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:0;">
+    <source src="videos/page1.mp4" type="video/mp4">
   </video>
-  <!-- เนื้อหาปุ่มอยู่ด้านบน -->
-  <div style="position: relative; z-index: 1; text-align: center; padding: 40px;">
-    <p id="mainQuestion">Please accept this gift</p>
+
+  <div style="position:relative; z-index:1; text-align:center; padding:40px;">
+    <p id="mainQuestion">Please accept this gift 🎁</p>
     <div class="button-container">
       <button class="btn-yes" id="btnYes"><span id="yesText">Yes</span></button>
       <button class="btn-no" id="btnNo"><span id="noText">No</span></button>
     </div>
   </div>
 </div>
+
 
 
   <!-- Page 2: Next -->
