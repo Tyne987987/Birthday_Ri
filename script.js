@@ -93,3 +93,6 @@ document.querySelectorAll('.activity-box').forEach(box => {
   }); 
 });
 
+document.addEventListener("click", () => {
+  document.getElementById("bgMusic").play();
+}, { once: true });
