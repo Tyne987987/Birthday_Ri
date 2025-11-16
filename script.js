@@ -93,18 +93,3 @@ document.querySelectorAll('.activity-box').forEach(box => {
   }); 
 });
 
-const activity2Music = document.getElementById("activity2Music");
-
-function showPage(pageId) {
-  document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
-  document.getElementById(pageId).classList.add('active');
-
-  // หยุดเพลงทุกหน้า
-  if (activity2Music) activity2Music.pause();
-
-  // เล่นเพลงเฉพาะ activity2
-  if (pageId === "activity2") {
-    activity2Music.currentTime = 0; 
-    activity2Music.play();
-  }
-}
